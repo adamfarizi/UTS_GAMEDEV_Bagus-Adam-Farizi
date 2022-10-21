@@ -1,0 +1,283 @@
+[gd_scene load_steps=43 format=2]
+
+[ext_resource path="res://assets/01-King Human/Fall (78x58).png" type="Texture" id=1]
+[ext_resource path="res://assets/01-King Human/Jump (78x58).png" type="Texture" id=2]
+[ext_resource path="res://assets/01-King Human/Run (78x58).png" type="Texture" id=3]
+[ext_resource path="res://assets/01-King Human/Hit (78x58).png" type="Texture" id=4]
+[ext_resource path="res://TilesetTembus.tres" type="TileSet" id=5]
+[ext_resource path="res://TilesetPadat.tres" type="TileSet" id=6]
+[ext_resource path="res://Hero.gd" type="Script" id=7]
+[ext_resource path="res://assets/01-King Human/Idle (78x58).png" type="Texture" id=8]
+[ext_resource path="res://Level2.gd" type="Script" id=9]
+[ext_resource path="res://audio/AudioLevelCastile.mp3" type="AudioStream" id=10]
+
+[sub_resource type="RectangleShape2D" id=127]
+extents = Vector2( 14, 8 )
+
+[sub_resource type="AtlasTexture" id=100]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 68, 58 )
+
+[sub_resource type="AtlasTexture" id=101]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 78, 0, 68, 58 )
+
+[sub_resource type="AtlasTexture" id=102]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 156, 0, 68, 58 )
+
+[sub_resource type="AtlasTexture" id=103]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 234, 0, 68, 58 )
+
+[sub_resource type="AtlasTexture" id=104]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 312, 0, 68, 58 )
+
+[sub_resource type="AtlasTexture" id=105]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 390, 0, 68, 58 )
+
+[sub_resource type="AtlasTexture" id=106]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 468, 0, 68, 58 )
+
+[sub_resource type="AtlasTexture" id=107]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 546, 0, 68, 58 )
+
+[sub_resource type="AtlasTexture" id=108]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 624, 0, 68, 58 )
+
+[sub_resource type="AtlasTexture" id=109]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 702, 0, 68, 58 )
+
+[sub_resource type="AtlasTexture" id=110]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 780, 0, 68, 58 )
+
+[sub_resource type="AtlasTexture" id=111]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 69, 58 )
+
+[sub_resource type="AtlasTexture" id=112]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 71, 58 )
+
+[sub_resource type="AtlasTexture" id=113]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 78, 0, 71, 58 )
+
+[sub_resource type="AtlasTexture" id=114]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 156, 0, 71, 58 )
+
+[sub_resource type="AtlasTexture" id=115]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 234, 0, 71, 58 )
+
+[sub_resource type="AtlasTexture" id=116]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 312, 0, 71, 58 )
+
+[sub_resource type="AtlasTexture" id=117]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 390, 0, 71, 58 )
+
+[sub_resource type="AtlasTexture" id=118]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 468, 0, 71, 58 )
+
+[sub_resource type="AtlasTexture" id=119]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 546, 0, 71, 58 )
+
+[sub_resource type="AtlasTexture" id=120]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 71, 58 )
+
+[sub_resource type="AtlasTexture" id=121]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 156, 0, 71, 58 )
+
+[sub_resource type="AtlasTexture" id=122]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 312, 0, 71, 58 )
+
+[sub_resource type="AtlasTexture" id=123]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 468, 0, 71, 58 )
+
+[sub_resource type="AtlasTexture" id=124]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 69, 58 )
+
+[sub_resource type="AtlasTexture" id=125]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 77, 58 )
+
+[sub_resource type="AtlasTexture" id=126]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 78, 0, 77, 58 )
+
+[sub_resource type="SpriteFrames" id=128]
+animations = [ {
+"frames": [ SubResource( 100 ), SubResource( 101 ), SubResource( 102 ), SubResource( 103 ), SubResource( 104 ), SubResource( 105 ), SubResource( 106 ), SubResource( 107 ), SubResource( 108 ), SubResource( 109 ), SubResource( 110 ) ],
+"loop": true,
+"name": "Diam",
+"speed": 9.0
+}, {
+"frames": [ SubResource( 111 ) ],
+"loop": false,
+"name": "Jatuh",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 112 ), SubResource( 113 ), SubResource( 114 ), SubResource( 115 ), SubResource( 116 ), SubResource( 117 ), SubResource( 118 ), SubResource( 119 ) ],
+"loop": true,
+"name": "Lari",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 120 ), SubResource( 121 ), SubResource( 122 ), SubResource( 123 ) ],
+"loop": false,
+"name": "LariCepat",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 124 ) ],
+"loop": false,
+"name": "Lompat",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 125 ), SubResource( 126 ) ],
+"loop": false,
+"name": "Terluka",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=129]
+extents = Vector2( 7, 10 )
+
+[sub_resource type="RectangleShape2D" id=130]
+extents = Vector2( 543, 7 )
+
+[sub_resource type="RectangleShape2D" id=131]
+extents = Vector2( 1, 18 )
+
+[node name="Level2" type="Node2D"]
+script = ExtResource( 9 )
+
+[node name="TileMapPadat" type="TileMap" parent="."]
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 32, 32 )
+collision_layer = 2
+collision_mask = 5
+format = 1
+tile_data = PoolIntArray( -1, 4, 0, -65536, 4, 0, -65535, 4, 0, -65534, 4, 0, -65533, 4, 0, -65532, 4, 0, -65531, 4, 0, -65530, 4, 0, -65529, 4, 0, -65528, 4, 0, -65527, 4, 0, -65526, 4, 0, -65525, 4, 0, -65524, 4, 0, -65523, 4, 0, -65522, 4, 0, -65521, 4, 0, -65520, 4, 0, -65519, 4, 0, -65518, 4, 0, -65517, 4, 0, -65516, 4, 0, -65515, 4, 0, -65514, 4, 0, -65513, 4, 0, -65512, 4, 0, -65511, 4, 0, -65510, 4, 0, -65509, 4, 0, -65508, 4, 0, -65507, 4, 0, -65506, 4, 0, -65505, 4, 0, -65504, 4, 0, 65535, 4, 0, 0, 12, 0, 1, 7, 0, 2, 7, 0, 3, 7, 0, 4, 7, 0, 5, 7, 0, 6, 7, 0, 7, 7, 0, 8, 7, 0, 9, 7, 0, 10, 19, 0, 11, 7, 0, 12, 7, 0, 13, 7, 0, 14, 7, 0, 15, 14, 0, 16, 4, 0, 17, 12, 0, 18, 7, 0, 19, 7, 0, 20, 7, 0, 21, 7, 0, 22, 7, 0, 23, 36, 0, 28, 6, 0, 29, 7, 0, 30, 7, 0, 31, 7, 0, 32, 7, 0, 131071, 4, 0, 65536, 5, 0, 65546, 11, 0, 65551, 3, 0, 65552, 4, 0, 65553, 5, 0, 65559, 10, 0, 196607, 4, 0, 131072, 5, 0, 131087, 6, 0, 131088, 7, 0, 131089, 36, 0, 131095, 10, 0, 131099, 27, 0, 131100, 32, 0, 131101, 1, 0, 131102, 1, 0, 131103, 1, 0, 131104, 1, 0, 262143, 4, 0, 196608, 5, 0, 196612, 27, 0, 196613, 29, 0, 196615, 27, 0, 196616, 29, 0, 196618, 30, 0, 196625, 11, 0, 196631, 37, 0, 196632, 2, 0, 196636, 6, 0, 196637, 7, 0, 196638, 7, 0, 196639, 7, 0, 196640, 14, 0, 327679, 4, 0, 262144, 18, 0, 262145, 29, 0, 262157, 9, 0, 262167, 3, 0, 262168, 18, 0, 262169, 29, 0, 262176, 37, 0, 393215, 4, 0, 327680, 8, 0, 327690, 30, 0, 327693, 10, 0, 327697, 27, 0, 327698, 28, 0, 327699, 28, 0, 327700, 29, 0, 327703, 6, 0, 327704, 8, 0, 327707, 0, 0, 327708, 1, 0, 327709, 1, 0, 327710, 1, 0, 327711, 1, 0, 327712, 15, 0, 458751, 4, 0, 393221, 9, 0, 393229, 41, 0, 393230, 29, 0, 393242, 0, 0, 393243, 15, 0, 393244, 4, 0, 393245, 4, 0, 393246, 4, 0, 393247, 4, 0, 393248, 4, 0, 524287, 4, 0, 458752, 1, 0, 458753, 1, 0, 458754, 1, 0, 458755, 1, 0, 458756, 1, 0, 458757, 17, 0, 458758, 1, 0, 458759, 1, 0, 458760, 1, 0, 458761, 2, 0, 458765, 10, 0, 458777, 0, 0, 458778, 15, 0, 458779, 4, 0, 458780, 4, 0, 458781, 4, 0, 458782, 4, 0, 458783, 4, 0, 458784, 4, 0, 589823, 4, 0, 524288, 4, 0, 524289, 4, 0, 524290, 4, 0, 524291, 4, 0, 524292, 4, 0, 524293, 4, 0, 524294, 4, 0, 524295, 4, 0, 524296, 4, 0, 524297, 5, 0, 524301, 10, 0, 524304, 9, 0, 524306, 9, 0, 524308, 9, 0, 524311, 0, 0, 524312, 1, 0, 524313, 15, 0, 524314, 4, 0, 524315, 4, 0, 524316, 4, 0, 524317, 4, 0, 524318, 4, 0, 524319, 4, 0, 524320, 4, 0 )
+
+[node name="TileMapTembus" type="TileMap" parent="."]
+tile_set = ExtResource( 5 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 24, 49, 0, 25, 50, 0, 26, 50, 0, 27, 51, 0, 65537, 93, 0, 65538, 47, 0, 65539, 47, 0, 65540, 47, 0, 65541, 47, 0, 65542, 47, 0, 65543, 47, 0, 65544, 47, 0, 65545, 48, 0, 65547, 93, 0, 65548, 47, 0, 65549, 47, 0, 65550, 48, 0, 65554, 93, 0, 65555, 47, 0, 65556, 47, 0, 65557, 47, 0, 65558, 48, 0, 65560, 49, 0, 65561, 50, 0, 65562, 58, 0, 65563, 79, 0, 65564, 95, 0, 65565, 95, 0, 65566, 95, 0, 65567, 95, 0, 65568, 95, 0, 131073, 49, 0, 131074, 50, 0, 131075, 58, 0, 131076, 53, 0, 131077, 53, 0, 131078, 64, 0, 131079, 53, 0, 131080, 53, 0, 131081, 66, 0, 131082, 95, 0, 131083, 62, 0, 131084, 50, 0, 131085, 50, 0, 131086, 51, 0, 131090, 49, 0, 131091, 50, 0, 131092, 50, 0, 131093, 50, 0, 131094, 51, 0, 131096, 52, 0, 131097, 59, 0, 131098, 51, 0, 196609, 52, 0, 196610, 59, 0, 196611, 51, 0, 196614, 56, 0, 196617, 56, 0, 196619, 49, 0, 196620, 58, 0, 196621, 53, 0, 196622, 71, 0, 196623, 47, 0, 196624, 48, 0, 196626, 49, 0, 196627, 50, 0, 196628, 50, 0, 196629, 50, 0, 196630, 51, 0, 196633, 52, 0, 196634, 71, 0, 196635, 48, 0, 262146, 81, 0, 262147, 79, 0, 262148, 78, 0, 262149, 47, 0, 262150, 63, 0, 262151, 47, 0, 262152, 47, 0, 262153, 69, 0, 262154, 95, 0, 262155, 62, 0, 262156, 51, 0, 262158, 49, 0, 262159, 50, 0, 262160, 65, 0, 262161, 95, 0, 262162, 80, 0, 262163, 53, 0, 262164, 53, 0, 262165, 59, 0, 262166, 51, 0, 262170, 81, 0, 262171, 79, 0, 262172, 95, 0, 262173, 95, 0, 262174, 95, 0, 262175, 95, 0, 327681, 93, 0, 327682, 84, 0, 327683, 30, 0, 327684, 81, 0, 327685, 53, 0, 327686, 59, 0, 327687, 50, 0, 327688, 50, 0, 327689, 51, 0, 327691, 49, 0, 327692, 51, 0, 327694, 52, 0, 327695, 59, 0, 327696, 51, 0, 327701, 49, 0, 327702, 51, 0, 327705, 89, 0, 327706, 92, 0, 393216, 95, 0, 393217, 80, 0, 393218, 79, 0, 393219, 95, 0, 393220, 92, 0, 393222, 52, 0, 393223, 53, 0, 393224, 53, 0, 393225, 79, 0, 393226, 78, 0, 393227, 61, 0, 393228, 51, 0, 393231, 49, 0, 393232, 60, 0, 393233, 47, 0, 393234, 47, 0, 393235, 47, 0, 393236, 47, 0, 393237, 61, 0, 393238, 60, 0, 393239, 47, 0, 393240, 77, 0, 393241, 92, 0, 458762, 49, 0, 458763, 50, 0, 458764, 51, 0, 458766, 93, 0, 458767, 72, 0, 458768, 53, 0, 458769, 64, 0, 458770, 53, 0, 458771, 64, 0, 458772, 53, 0, 458773, 59, 0, 458774, 58, 0, 458775, 53, 0, 458776, 54, 0, 524298, 49, 0, 524299, 50, 0, 524300, 51, 0, 524302, 49, 0, 524303, 51, 0, 524305, 56, 0, 524307, 56, 0, 524309, 49, 0, 524310, 51, 0 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="TileMapTembus"]
+collision_layer = 2
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMapTembus/StaticBody2D"]
+position = Vector2( 112, 168 )
+shape = SubResource( 127 )
+one_way_collision = true
+
+[node name="Hero" type="KinematicBody2D" parent="."]
+position = Vector2( 14, 208 )
+collision_mask = 14
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="AnimatedSprite" parent="Hero"]
+frames = SubResource( 128 )
+animation = "Diam"
+frame = 10
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hero"]
+position = Vector2( -2, 4 )
+shape = SubResource( 129 )
+
+[node name="Camera2D" type="Camera2D" parent="Hero"]
+current = true
+limit_left = 0
+limit_top = 0
+limit_right = 1052
+limit_bottom = 285
+limit_smoothed = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+drag_margin_left = 0.25
+drag_margin_top = 0.3
+drag_margin_right = 0.25
+drag_margin_bottom = 0.3
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="Timer" type="Timer" parent="Hero"]
+wait_time = 0.2
+one_shot = true
+
+[node name="Zonajatuh" type="Area2D" parent="."]
+position = Vector2( 542, 324 )
+collision_layer = 16
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zonajatuh"]
+position = Vector2( -31, -27 )
+shape = SubResource( 130 )
+
+[node name="NextLevel" type="Area2D" parent="."]
+position = Vector2( 542, 324 )
+collision_layer = 16
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextLevel"]
+position = Vector2( 517, -276 )
+shape = SubResource( 131 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+volume_db = -15.0
+autoplay = true
+
+[connection signal="timeout" from="Hero/Timer" to="Hero" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Zonajatuh" to="." method="_on_Zonajatuh_body_entered"]
+[connection signal="body_entered" from="NextLevel" to="." method="_on_NextLevel_body_entered"]

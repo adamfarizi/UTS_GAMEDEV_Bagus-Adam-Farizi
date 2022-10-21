@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://TilesetPadat.tres" type="TileSet" id=1]
+[ext_resource path="res://assets/BGTitle.png" type="Texture" id=2]
+[ext_resource path="res://VBoxContainer.gd" type="Script" id=3]
+[ext_resource path="res://assets/Pixel Emulator.otf" type="DynamicFontData" id=4]
+[ext_resource path="res://audio/AudioMainMenu.mp3" type="AudioStream" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 14
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[node name="Title" type="Node2D"]
+
+[node name="BgTitle" type="Sprite" parent="."]
+position = Vector2( 160, 120 )
+scale = Vector2( 0.228571, 0.342857 )
+texture = ExtResource( 2 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 131072, 2, 0, 131081, 0, 0, 196608, 5, 0, 196617, 3, 0, 262144, 5, 0, 262153, 3, 0, 327680, 5, 0, 327689, 3, 0, 393216, 13, 0, 393217, 1, 0, 393218, 1, 0, 393219, 2, 0, 393222, 0, 0, 393223, 1, 0, 393224, 1, 0, 393225, 15, 0, 458752, 4, 0, 458753, 4, 0, 458754, 4, 0, 458755, 5, 0, 458758, 3, 0, 458759, 4, 0, 458760, 4, 0, 458761, 4, 0 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+margin_left = 76.0
+margin_top = 86.0
+margin_right = 244.0
+margin_bottom = 158.0
+script = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer"]
+margin_right = 168.0
+margin_bottom = 17.0
+custom_colors/font_color = Color( 0.772549, 0.431373, 0.431373, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_offset_y = 0
+custom_fonts/font = SubResource( 1 )
+text = "Dwarfenture"
+align = 1
+
+[node name="TombolMain" type="Button" parent="CanvasLayer/VBoxContainer"]
+margin_top = 21.0
+margin_right = 168.0
+margin_bottom = 41.0
+text = "Main"
+
+[node name="TombolTentang" type="Button" parent="CanvasLayer/VBoxContainer"]
+margin_top = 45.0
+margin_right = 168.0
+margin_bottom = 65.0
+text = "Tentang"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/TombolMain" to="CanvasLayer/VBoxContainer" method="_on_TombolMain_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/TombolTentang" to="CanvasLayer/VBoxContainer" method="_on_TombolTentang_pressed"]
